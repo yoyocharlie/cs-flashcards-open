@@ -14,11 +14,11 @@ To run this project locally, follow the steps below:
 - Clone the forked repository to your local machine:
 
   ```bash
-  git clone https://github.com/your-username/flashcards-open-source.git
+  git clone https://github.com/yoyocharlie/cs-flashcards-open.git
   ```
 
   ```bash
-  cd flashcards-open-source
+  cd cs-flashcards-open
   ```
 
 ### 2. Install Dependencies
