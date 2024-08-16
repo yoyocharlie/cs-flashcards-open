@@ -2,6 +2,8 @@
 
 This is an open-source flashcards web app built using the T3 Stack. The project is configured to use SQLite for easy setup and local development.
 
+test
+
 ---
 
 ## Getting Started
