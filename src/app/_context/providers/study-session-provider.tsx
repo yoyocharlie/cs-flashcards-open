@@ -19,8 +19,6 @@ export function StudySessionProvider({
 }: UseStudySessionProps & { children: ReactNode }) {
   const studySession = useStudySession({ deckId });
 
-  console.log(studySession);
-
   if (studySession.flashcards === null) {
     notFound();
   }
