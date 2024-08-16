@@ -14,7 +14,7 @@ import { CircleUser } from "lucide-react";
 import { Label } from "../../ui/label";
 import Link from "next/link";
 import { useScrollShadow } from "../hooks/useScrollShadow";
-import { Session } from "next-auth";
+import type { Session } from "next-auth";
 
 export function NavbarClient({ session }: { session: Session | null }) {
   const isScrolled = useScrollShadow();
@@ -48,9 +48,11 @@ export function NavbarClient({ session }: { session: Session | null }) {
                   Decks
                 </DropdownMenuItem>
               </Link>
-              <DropdownMenuItem className="cursor-pointer">
-                Settings
-              </DropdownMenuItem>
+              <Link href={"/settings"}>
+                <DropdownMenuItem className="cursor-pointer">
+                  Settings
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuSeparator />
               <Link href={"/api/auth/signout"}>
                 <DropdownMenuItem className="cursor-pointer">

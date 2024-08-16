@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import { FlashcardList } from "~/app/_components/flashcard-list";
 import { StudySession } from "~/app/_components/study";
 import { getServerAuthSession } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";

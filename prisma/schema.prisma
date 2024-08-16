@@ -17,7 +17,7 @@ model Deck {
   name          String
   userId        String
   learnedCards  Int    @default(0)
-  user          User   @relation(fields: [userId], references: [id])
+  user          User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   cards         Card[]
 }
 

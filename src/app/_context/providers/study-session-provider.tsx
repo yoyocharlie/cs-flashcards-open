@@ -1,5 +1,6 @@
 "use client";
 
+import { notFound } from "next/navigation";
 import React, { createContext, useContext, type ReactNode } from "react";
 import {
   useStudySession,
@@ -17,6 +18,12 @@ export function StudySessionProvider({
   deckId,
 }: UseStudySessionProps & { children: ReactNode }) {
   const studySession = useStudySession({ deckId });
+
+  console.log(studySession);
+
+  if (studySession.flashcards === null) {
+    notFound();
+  }
 
   return (
     <StudySessionContext.Provider value={studySession}>
