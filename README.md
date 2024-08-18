@@ -1,10 +1,15 @@
-# cs-flashcards
+<h1 align="center">cs-flashcards</h1>
 
-This is an open-source flashcards web app built using the T3 Stack. The project is configured to use SQLite for easy setup and local development.
+<h4 align="center">An open-source, fullstack flashcards web app</h4>
+
+<h3 align="center"><img width="700" style="border-radius:5px;" alt="demo" src="cs-flashcards-showcase.gif"></h3>
 
 ---
 
 ## Getting Started
+
+> [!NOTE]  
+> The project is currently in active development, so occasional issues or disruptions can be expected.
 
 To run this project locally, follow the steps below:
 
@@ -37,7 +42,8 @@ To run this project locally, follow the steps below:
 
 - Instructions for setting up credentials with Google can be found [here](https://support.google.com/cloud/answer/6158849?hl=en).
 
-\* Your authorized URI for development will be `http://localhost:3000/api/auth/callback/google`
+> [!NOTE]  
+> In the Google dev console, your authorized URI for development will be `http://localhost:3000/api/auth/callback/google`
 
 ### 4. Push the Database Schema
 
@@ -71,6 +77,8 @@ To run this project locally, follow the steps below:
   pnpm db:generate
   pnpm db:migrate
   ```
+
+---
 
 ## Running with Docker
 
