@@ -26,7 +26,7 @@ export function DeckStats() {
                 <TooltipTrigger asChild>
                   <Brain size={18} fill="#ffb3b3" color="black" />
                 </TooltipTrigger>
-                <TooltipContent className="bg-secondary">
+                <TooltipContent>
                   <p>
                     {deckStats?.learnedCards && deckStats?.learnedCards > 0
                       ? `You've mastered ${deckStats?.learnedCards} of these questions`

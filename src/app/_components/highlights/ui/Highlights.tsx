@@ -12,7 +12,9 @@ export function Highlights() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Create and organize your own decks for any subject.</p>
+          <p className="text-muted-foreground">
+            Create and organize your own decks for any subject.
+          </p>
         </CardContent>
       </Card>
 
@@ -24,7 +26,9 @@ export function Highlights() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Track your learning progress and improve over time.</p>
+          <p className="text-muted-foreground">
+            Track your learning progress and improve over time.
+          </p>
         </CardContent>
       </Card>
 
@@ -36,7 +40,9 @@ export function Highlights() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p>Access your flashcards anywhere, anytime on any device.</p>
+          <p className="text-muted-foreground">
+            Access your flashcards anywhere, anytime on any device.
+          </p>
         </CardContent>
       </Card>
     </section>

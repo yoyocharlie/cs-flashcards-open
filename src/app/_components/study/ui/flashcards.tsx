@@ -17,8 +17,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../../ui/tooltip";
+import { useTheme } from "~/app/_context/providers/theme-provider";
 
 export function Flashcards() {
+  const { theme } = useTheme();
   const {
     currentIndex,
     currentContent,
@@ -37,16 +39,24 @@ export function Flashcards() {
           </CardTitle>
           <div className="flex items-center gap-3">
             <span>
-              {isLearned ? <CircleCheck stroke="white" fill="#16a34a" /> : null}
+              {isLearned ? (
+                <CircleCheck
+                  stroke={theme === "light" ? "white" : "#101411"}
+                  fill="#16a34a"
+                />
+              ) : null}
             </span>
-            <TooltipProvider delayDuration={300}>
+            <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button onClick={onMarkAsLearned} variant="outline">
+                  <Button
+                    onClick={onMarkAsLearned}
+                    variant={theme === "light" ? "outline" : "secondary"}
+                  >
                     <Brain size={18} fill="#ffb3b3" color="black" />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent className="bg-secondary">
+                <TooltipContent>
                   If you know this topic well, mark this card as
                   &quot;learned&quot;
                 </TooltipContent>
