@@ -2,7 +2,7 @@
 
 <h4 align="center">An open-source, fullstack flashcards web app</h4>
 
-<h3 align="center"><img width="700" style="border-radius:5px;" alt="demo" src="cs-flashcards-showcase.gif" /></h3>
+<h3 align="center"><img width="700" alt="demo" src="cs-flashcards-showcase.gif" /></h3>
 
 ---
 
