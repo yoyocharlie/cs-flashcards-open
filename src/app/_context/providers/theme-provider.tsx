@@ -24,7 +24,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "light",
+  defaultTheme = "system",
   storageKey = "cs-flashcards-theme",
   ...props
 }: ThemeProviderProps) {
@@ -32,7 +32,6 @@ export function ThemeProvider({
     try {
       return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
     } catch (error) {
-      console.error("Error accessing localStorage:", error);
       return defaultTheme;
     }
   });
