@@ -1,19 +1,21 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
+import { setCookie, getCookie, hasCookie } from "cookies-next";
 
 type Theme = "dark" | "light" | "system";
 
-type ThemeProviderProps = {
+interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
-};
+}
 
-type ThemeProviderState = {
+interface ThemeProviderState {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-};
+}
 
 const initialState: ThemeProviderState = {
   theme: "system",
@@ -29,11 +31,10 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    try {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
-    } catch (error) {
-      return defaultTheme;
+    if (hasCookie(storageKey)) {
+      return getCookie(storageKey) as Theme;
     }
+    return defaultTheme;
   });
 
   useEffect(() => {
@@ -48,21 +49,19 @@ export function ThemeProvider({
         : "light";
 
       root.classList.add(systemTheme);
+      setCookie(storageKey, systemTheme);
       return;
     }
 
     root.classList.add(theme);
-  }, [theme]);
+    setCookie(storageKey, theme);
+  }, [theme, storageKey]);
 
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {
-      try {
-        localStorage.setItem(storageKey, newTheme);
-        setTheme(newTheme);
-      } catch (error) {
-        console.error("Error setting theme in localStorage:", error);
-      }
+      setCookie(storageKey, newTheme);
+      setTheme(newTheme);
     },
   };
 

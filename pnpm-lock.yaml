@@ -62,6 +62,9 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
+  cookies-next:
+    specifier: ^4.2.1
+    version: 4.2.1
   framer-motion:
     specifier: ^11.3.28
     version: 11.3.28(react-dom@18.3.1)(react@18.3.1)
@@ -1755,6 +1758,13 @@ packages:
   /cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /cookies-next@4.2.1:
+    resolution: {integrity: sha512-qsjtZ8TLlxCSX2JphMQNhkm3V3zIMQ05WrLkBKBwu50npBbBfiZWIdmSMzBGcdGKfMK19E0PIitTfRFAdMGHXg==}
+    dependencies:
+      '@types/cookie': 0.6.0
+      cookie: 0.6.0
     dev: false
 
   /copy-anything@3.0.5:

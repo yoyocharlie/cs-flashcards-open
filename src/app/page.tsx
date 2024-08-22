@@ -14,7 +14,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <main className="flex flex-col items-center justify-center p-4">
+      <main className="flex flex-col items-center justify-center overflow-x-hidden p-4">
         <Hero />
         <Highlights />
         <CTA />
