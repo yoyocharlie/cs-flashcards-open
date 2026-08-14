@@ -1,3 +1,6 @@
+
+</think>
+
 <h1 align="center">cs-flashcards</h1>
 
 <h4 align="center">An open-source, fullstack flashcards web app</h4>
@@ -16,10 +19,10 @@ To run this project locally, follow the steps below:
 ### 1. Fork and Clone the Repository
 
 - Fork the repository to your GitHub account.
-- Clone the forked repository to your local machine:
+- Clone your forked repository to your local machine:
 
   ```bash
-  git clone https://github.com/yoyocharlie/cs-flashcards-open.git
+  git clone https://github.com/<your-username>/cs-flashcards-open.git
   ```
 
   ```bash
